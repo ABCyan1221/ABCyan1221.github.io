@@ -145,6 +145,7 @@
     --link-hover-bg: oklch(0.95 0.025 var(--primary-hue));
     --link-active-bg: oklch(0.9 0.05 var(--primary-hue));
     --article-code-bg: oklch(0.95 0.02 var(--primary-hue));
+    --article-block: oklch(0.95 0.02 var(--primary-hue));
     --blockquote-bg: oklch(0.98 0.005 var(--primary-hue));
     --badge-bg: oklch(0.95 0.02 var(--primary-hue));
     --text-on-light: oklch(0.55 0.12 var(--primary-hue));
@@ -154,6 +155,7 @@
     --enter-btn-hover: oklch(0.96 0.015 var(--primary-hue));
     --enter-btn-active: oklch(0.9 0.03 var(--primary-hue));
     --selection-bg: oklch(0.9 0.05 var(--primary-hue));
+    --code-block-selection-bg: oklch(0.9 0.05 var(--primary-hue));
   }
 }
 @supports not (color: oklch(0 0 0)) {
@@ -174,6 +176,7 @@
     --link-hover-bg: #e0f1fe;
     --link-active-bg: #c1e3fc;
     --article-code-bg: #e3f1fb;
+    --article-block: #e3f1fb;
     --blockquote-bg: #f6f9fb;
     --badge-bg: #e3f1fb;
     --text-on-light: #1479b0;
@@ -183,6 +186,7 @@
     --enter-btn-hover: #e9f3fb;
     --enter-btn-active: #cde1f0;
     --selection-bg: #c1e3fc;
+    --code-block-selection-bg: #c1e3fc;
   }
 }
 body {
@@ -2329,7 +2333,7 @@ a.article-title:active {
   padding: 15px 20px;
   margin: 16px auto;
   overflow: auto;
-  color: #ccc;
+  color: var(--article-text);
   line-height: 25.6px;
 }
 .article-entry pre ::selection,
@@ -2338,7 +2342,7 @@ a.article-title:active {
 }
 .article-entry .highlight .gutter pre,
 .article-entry .gist .gist-file .gist-data .line-numbers {
-  color: #f2777a;
+  color: #666;
   font-size: 0.85em;
 }
 .article-entry pre,
